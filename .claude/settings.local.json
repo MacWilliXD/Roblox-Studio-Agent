@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rojo --version)",
+      "Bash(aftman --version)",
+      "Bash(git mv *)",
+      "Bash(mkdir -p HungrySnakes)",
+      "Bash(cp -r src HungrySnakes/)",
+      "Bash(claude mcp *)",
+      "Bash(mkdir -p *)",
+      "Bash(cp *)",
+      "Bash(find *)",
+      "PowerShell(*)"
+    ]
+  }
+}
