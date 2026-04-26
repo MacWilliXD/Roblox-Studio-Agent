@@ -62,7 +62,6 @@ $json = ($r -split "`n" | Where-Object { $_ -match '^data: ' } | Select-Object -
 3. **`ScaleTo` es absoluto** — para multiplicar: `model:ScaleTo(model:GetScale() * factor)`
 4. **No uses `undo`/`redo`** después de `execute_luau` — bypassea historial
 5. **Confirma borrados** y modificaciones masivas antes de ejecutar
-6. **En proyectos Rojo** (con `default.project.json`), edita scripts vía Read/Edit en el filesystem cuando sea posible — son las fuentes de verdad
 
 ## Output
 

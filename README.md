@@ -42,7 +42,6 @@ Un set de skills, un agente especializado y un helper de PowerShell que conectan
 | 🏗️ **Construcción de escenas** | Crea Parts, modelos, UI y jerarquías completas en un solo prompt |
 | 🐛 **Debug y playtest** | Inicia playtests, captura output, simula input y toma screenshots |
 | ⚡ **Ejecución de Luau** | Corre código Luau directamente en el contexto del plugin |
-| 🤖 **Auto-detección Rojo** | Sabe cuándo editar el filesystem y cuándo el DataModel |
 | 🔌 **Auto-recovery** | El servidor MCP se inicia automáticamente si está caído |
 
 ---
@@ -178,7 +177,6 @@ xcopy /E /I "$HOME\.claude-roblox\.claude\lib" "$HOME\.claude\lib"
 - 50+ tools del MCP de Roblox con args y casos de uso
 - Patrones comunes de Luau (RemoteEvent, Tween, DataStore, CollectionService)
 - Servicios de Roblox y APIs de uso frecuente
-- Detección de proyectos Rojo y workflows correctos
 - Reglas de seguridad (no usar `undo` después de `execute_luau`, etc.)
 
 ---
@@ -352,7 +350,6 @@ Te dará una tabla con el estado de los 6 componentes:
 - [ ] Skill `/roblox-build` para procedural builds
 - [ ] Skill `/roblox-test` con assertions automatizadas
 - [ ] Templates de proyectos (lobby, FPS base, RPG starter)
-- [ ] Integración con Rojo para auto-detección de mappings
 - [ ] Soporte para multi-place (DataStores compartidos)
 - [ ] Dashboard de output del playtest en tiempo real
 
@@ -388,7 +385,6 @@ Te dará una tabla con el estado de los 6 componentes:
 
 - [`robloxstudio-mcp`](https://www.npmjs.com/package/robloxstudio-mcp) — el MCP server que hace todo posible
 - [Anthropic Claude Code](https://claude.com/claude-code) — la plataforma
-- [Rojo](https://rojo.space/) — el flujo de trabajo Roblox + filesystem
 
 ---
 

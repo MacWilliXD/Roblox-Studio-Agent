@@ -1,8 +1,6 @@
 {
   "permissions": {
     "allow": [
-      "Bash(rojo --version)",
-      "Bash(aftman --version)",
       "Bash(git mv *)",
       "Bash(mkdir -p HungrySnakes)",
       "Bash(cp -r src HungrySnakes/)",

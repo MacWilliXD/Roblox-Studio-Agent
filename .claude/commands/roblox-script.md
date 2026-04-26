@@ -1,19 +1,11 @@
 ---
 name: roblox-script
-description: Operaciones enfocadas en scripts. Lee, edita, busca y analiza scripts en Studio. Detecta automáticamente si el proyecto usa Rojo y prefiere editar el filesystem cuando aplica.
+description: Operaciones enfocadas en scripts. Lee, edita, busca y analiza scripts en Studio vía MCP.
 ---
 
 El usuario quiere trabajar con scripts: $ARGUMENTS
 
-## Detecta el contexto primero
-
-1. ¿Hay un `default.project.json` en el directorio actual?
-   ```powershell
-   Test-Path "default.project.json"
-   ```
-2. Si existe, **es un proyecto Rojo** — los scripts están en el filesystem (típicamente `src/server`, `src/client`, `src/shared`) y se sincronizan a Studio. Prefiere editar archivos `.luau` directamente con Read/Edit.
-
-3. Si no existe Rojo o el script vive solo en Studio (ej: en `Workspace`), usa los tools del MCP.
+Los scripts viven en Studio (DataModel) y se editan vía las tools del MCP. No asumas filesystem-as-source-of-truth.
 
 ## Operaciones
 
@@ -80,11 +72,10 @@ $args = @{
 
 ## Reglas
 
-1. **En proyectos Rojo, edita el filesystem cuando puedas** — es la fuente de verdad
-2. **`edit_script_lines` requiere match exacto y único** — si falla, lee el script primero
-3. **Usa `get_script_analysis` después de cambios** para detectar errores
-4. **Para cambios masivos, usa `dryRun: true` primero**
-5. **Distingue `Script` (server), `LocalScript` (cliente), `ModuleScript` (librería)**
+1. **`edit_script_lines` requiere match exacto y único** — si falla, lee el script primero
+2. **Usa `get_script_analysis` después de cambios** para detectar errores
+3. **Para cambios masivos, usa `dryRun: true` primero**
+4. **Distingue `Script` (server), `LocalScript` (cliente), `ModuleScript` (librería)**
 
 ## Output
 
